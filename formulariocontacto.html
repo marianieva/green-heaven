@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Green Heaven - Contacto</title>
+        <link rel="icon" type="image/x-icon" href="img/logo_green_home_favicon.png">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <!-- HEADER y NAVEGACIÓN principal -->
+        <header>
+            <div id="contenedor-barra-cabecera">
+                <div id="barra-cabecera">   
+                    <div id="contenedor-logo-home">
+                        <a id="enlace-home" href="index.html"></a>
+                        <img id="logo-home" src="img/Logo_Green_Heaven-sinletra.png" alt="">
+                        <h1 id="nombre-web">Green Heaven</h1>
+                    </div>
+                    <nav>
+                        <ul class="nav-desplegable">
+                            <li> <a href="#">Menú</a>
+                                <ul class="lista-nav">
+                                    <li><a class="enlace-navbar" href="quienes_somos.html"> Quiénes somos</a></li>
+                                    <li><a class="enlace-navbar" href="servicios.html"> Servicios</a></li>
+                                    <li><a class="enlace-navbar" href="#"> Noticias</a></li>
+                                    <li><a class="enlace-navbar" href="#"> Publicaciones</a></li>
+                                    <li><a class="enlace-navbar" href="#"> Localizacion</a></li>
+                                    <li><a class="enlace-navbar" href="formulariocontacto.html"> Contacto</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                
+                </div> 
+            </div>
+        </header>
+        <div id="div-vacio-header"></div>
+        <!-- Fin HEADER y navegación principal -->
+
+        <main>
+            <div class="header-img">
+                <img src="img/imagen_header_contacto_greenheaven.jpg" alt="Plantas decorativas de color verde" id="img-header-home">
+            </div>
+
+            <div class="contenedor-ppal">
+                <section>
+                    <h2 class="titulo-1">Formulario de contacto</h2>
+                    <p class="subtitulo"> Realiza todas las consultas que necesites de una forma <span class="resaltado-texto">personalizada</span>.</p>
+                </section>
+
+                <section>
+                <!--utilizamos el method "post" para que los datos enviados sean privados y no se vean en la URL de la pagina web-->
+                    <form action="procesarPeticion.jsp" method="post">
+                        <h3 class="titulo-4">Datos de contacto</h3>
+                        <fieldset class="caja-form">
+                            
+                            <div class="campo-formulario nombre-formulario">
+                                <label for="nombre">Nombre:</label>
+                                <input id="nombre" type="text" name="nombre" class="text_size" required>*
+                            </div>
+
+                            <div class="campo-formulario apellidos-formulario">
+                                <label for="apellidos">Apellidos:</label>
+                                <input id="apellidos" type="text" name="apellidos" class="text_size">
+                            </div>
+
+                            <div class="campo-formulario clear ">
+                                <label for="nacimiento">Fecha de nacimiento:</label>
+                                <input id="nacimiento" type="date" name="nacimiento" class="text_size">
+                            </div>
+
+                            <div class="campo-formulario ">
+                                <label for="identificacion">Tipo de documento:</label>
+                                <input type="radio" name="identificacion" value="NIF"/>NIF
+                                <input type="radio" name="identificacion" value="NIE"/>NIE
+                                <input type="radio" name="identificacion" value="PASSPORT"/>Pasaporte
+                            </div>
+
+                            <div class="campo-formulario ">
+                                <label for="num_identificacion"></label>
+                                <input id="num_identificacion" type="test" name="num_identificacion" class="text_size">
+                            </div>
+
+                            <div class="campo-formulario ">
+                                <label for="direccion">Dirección:</label><br/>
+                                <textarea id="direccion"  style="resize: none;" name="direccion"   placeholder="Introduce tu domicilio" class="text_size"></textarea>
+                            </div>
+
+                            <div class="campo-formulario ">
+                                <label for="email">Email:</label>
+                                <input id="email" type="email" name="email" class="text_size" required>*
+                            </div>
+
+                            <div class="campo-formulario ">
+                                <label for="telefono">Teléfono:</label>
+                                <input id="telefono" type="tel" name="telefono" class="text_size"><br/>
+                            </div>
+
+                            <div class="campo-formulario ">
+                                <label for="tipo_consulta">Tipo de consulta:</label><br/>
+                                <select name="tipo_consulta" class="text_size">
+                                    <option value="I">Información</option>
+                                    <option value="TUE">Presupuesto</option>
+                                </select>
+                            </div>
+
+                            <div class="campo-formulario ">
+                                <label for="consulta">Consulta:</label><br/>
+                                <textarea id="consulta" name="consulta" placeholder="Consultar" class="text_size"></textarea>
+                            </div>
+
+                            <div class="campo-formulario ">
+                                <label for="color">Indique la gama cromática preferente para realizar su consulta de forma personalizada:</label>
+                                <input id="color" type="color" name="color">
+                            </div>
+
+                            <div class="campo-formulario ">
+                                <input type="checkbox" name="terminos" value="Y" />
+                                <label for="terminos">He leído y acepto los términos de uso  </label><br/>
+                            </div>
+
+
+                            <p class="drcha">Los campos con * son obligatorios</p>
+
+                            <div class="campo-formulario clear ">
+                                <input type="submit" value="Enviar datos" class="text_size boton-form"/>
+                                <input type="reset" value="Limpiar formulario" class="boton-form" />
+                            </div>
+
+                        </fieldset>
+                        <br/>
+                    </form>
+                </section>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-three-col">
+                <div class="contenedor-footer footer-col-1">
+                    <div class="tit-cont-footer"> Horario y apertura</div>
+                    <div class="content-cont-footer">
+                        <table class="tabla-centrada">
+                            <tr>
+                                <td><b>Lunes - Viernes</td></td>
+                                <td>9:00 - 20:00</td>
+                            </tr>
+                            <tr>
+                                <td><b>Fin de semana</b></td>
+                                <td>9:00 - 20:00</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+    
+                <div class="contenedor-footer footer-col-2">
+                    <div class="tit-cont-footer"> Ubicación</div>
+                    <div class="content-cont-footer">
+                        <div class="fila-col-footer">
+                            <img class="icono-ubicacion" src="img/green_heaven_iconolocalizacion.svg" alt="">
+                            <p class="p-con-icono ubicacion">Calle Las Rosas, 3, Madrid</p>
+                        </div>
+                </div>
+                </div>
+    
+                <div class="contenedor-footer footer-col-3">
+                    <div class="tit-cont-footer">Contacto</div>
+                    <div class="contenedor-footer">
+                        <div class="fila-col-footer">
+                            <img id="icono-mail" src="img/icono_contacto.svg" alt="">
+                            <p class="p-con-icono mail">hola@greenheaven.com</p>
+                        </div>
+    
+                        <div class="fila-col-footer">
+                            <img class="icono-telefono" src="img/icono_telefono.svg" alt="">
+                            <p class="p-con-icono tel">+34 111 111 111</p>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+        </footer>
+
+    </body>
+</html>
